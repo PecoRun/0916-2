@@ -1,14 +1,21 @@
-# 個人儀表板與即時動態時鐘網站 ⏱️✨
+# AIoT-DA 課程 — DIC-1（Do in Class 1）專案說明文件 ⏱️✨
 
-一個現代化、響應式且可自訂的個人網頁儀表板，具備即時數位相框時鐘、模擬指針時鐘、多時區轉換器、日光循環進度追蹤、動態視覺主題以及個人生產力小工具。
+## 📚 課程與實作資訊
+
+- **課程名稱**: AIoT 與數據分析（AIoT & Data Analytics, AIoT-DA）
+- **課堂實作**: DIC-1 (Do in Class 1) — 個人入口網站與動態時鐘儀表板（Personal Portal & Live Timekeeper）
+- **授課單元**: Lecture 2 — 瀏覽器、現代 Web 核心與非同步資料流（L2Web）
+- **示範教師**: Huan Chen
+- **示範儲存庫網址**: [https://github.com/huanchen1107/0916-2](https://github.com/huanchen1107/0916-2)
+- **示範 Live Demo Page**: [https://huanchen1107.github.io/0916-2/](https://huanchen1107.github.io/0916-2/)
+- **學生 Live Demo Page**: [https://pecorun.github.io/0916-2/](https://pecorun.github.io/0916-2/)
+- **學生儲存庫網址**: [https://github.com/PecoRun/0916-2](https://github.com/PecoRun/0916-2)
 
 ---
 
-## 🌐 線上展示 (Live Demo)
+## 🌐 專案簡介
 
-- **🚀 GitHub Pages 展示網址**: [https://pecorun.github.io/0916-2/](https://pecorun.github.io/0916-2/)
-- **📦 GitHub 程式碼儲存庫**: [https://github.com/PecoRun/0916-2](https://github.com/PecoRun/0916-2)
-- **💻 本地開發伺服器**: `http://localhost:8080` 或直接開啟 [`index.html`](./index.html)。
+本專案為 **AIoT-DA** 課程之 **DIC-1 課堂實作成果**，目標為建構一個現代化、響應式且可自訂的個人入口網站與動態時鐘儀表板，具備即時數位相框時鐘、模擬指針時鐘、多時區轉換器、日光循環進度追蹤、動態視覺主題以及個人生產力小工具。
 
 ---
 
@@ -77,11 +84,11 @@ d:/L2/
 ├── index.html     # 語意化 HTML 結構與組件標記
 ├── styles.css     # CSS 視覺設計系統、主題變數、光暈動畫與毛玻璃樣式
 ├── app.js         # JavaScript 主邏輯、時鐘運行、時區計算與資料保存
-└── README.md      # 專案繁體中文說明文件
+└── README.md      # 專案課程說明文件
 ```
 
 ---
 
 ## 📄 授權與版權
 
-專為 **Lin Jin De** 精心打造，兼具精準度與時尚設計。
+專為 AIoT-DA 課程 **Lin Jin De** 精心打造，兼具精準度與時尚設計。
