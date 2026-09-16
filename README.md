@@ -6,8 +6,6 @@
 - **課堂實作**: DIC-1 (Do in Class 1) — 個人入口網站與動態時鐘儀表板（Personal Portal & Live Timekeeper）
 - **授課單元**: Lecture 2 — 瀏覽器、現代 Web 核心與非同步資料流（L2Web）
 - **示範教師**: Huan Chen
-- **示範儲存庫網址**: [https://github.com/huanchen1107/0916-2](https://github.com/huanchen1107/0916-2)
-- **示範 Live Demo Page**: [https://huanchen1107.github.io/0916-2/](https://huanchen1107.github.io/0916-2/)
 - **學生 Live Demo Page**: [https://pecorun.github.io/0916-2/](https://pecorun.github.io/0916-2/)
 - **學生儲存庫網址**: [https://github.com/PecoRun/0916-2](https://github.com/PecoRun/0916-2)
 
