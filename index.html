@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyber-dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Space & Live Clock</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Ambient Effects -->
+    <div class="background-glow bg-glow-1"></div>
+    <div class="background-glow bg-glow-2"></div>
+    <div class="stars-overlay"></div>
+
+    <div class="app-container">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <div class="nav-brand">
+                <i class="fa-solid fa-sparkles brand-icon"></i>
+                <span class="brand-text">Personal Dashboard</span>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Theme Switcher -->
+                <div class="theme-dropdown-container">
+                    <button id="theme-btn" class="nav-btn" title="Change Theme">
+                        <i class="fa-solid fa-palette"></i>
+                        <span id="theme-label">Cyber Dark</span>
+                    </button>
+                    <div id="theme-menu" class="theme-menu hidden">
+                        <button class="theme-option active" data-theme="cyber-dark">
+                            <span class="theme-dot cyber-dark-dot"></span> Cyber Dark
+                        </button>
+                        <button class="theme-option" data-theme="aurora-glass">
+                            <span class="theme-dot aurora-dot"></span> Aurora Glass
+                        </button>
+                        <button class="theme-option" data-theme="sunset-glow">
+                            <span class="theme-dot sunset-dot"></span> Sunset Glow
+                        </button>
+                        <button class="theme-option" data-theme="minimal-light">
+                            <span class="theme-dot light-dot"></span> Minimal Light
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Time Format Switcher -->
+                <button id="format-toggle-btn" class="nav-btn" title="Toggle 12h / 24h">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="format-label">12H</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Hero Section -->
+        <main class="main-content">
+            <!-- Header Greeting & User Profile -->
+            <section class="hero-profile-card glass-panel">
+                <div class="profile-header">
+                    <div class="profile-details">
+                        <div class="greeting-badge">
+                            <span id="greeting-icon">☀️</span>
+                            <span id="greeting-text">Good Afternoon</span>
+                        </div>
+
+                        <div class="name-heading-wrapper">
+                            <h1 id="user-name" class="user-name" contenteditable="true" spellcheck="false"
+                                title="Click to edit your name">Lin Jin De</h1>
+                            <button id="edit-name-btn" class="icon-edit-btn" title="Edit Name">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </div>
+
+                        <!-- Hero Live Time Display Banner -->
+                        <div class="hero-live-time-card">
+                            <i class="fa-regular fa-clock hero-time-icon"></i>
+                            <span id="hero-clock-display" class="hero-clock-display">08:28:03 PM</span>
+                            <span class="hero-time-divider">•</span>
+                            <span id="hero-date-display" class="hero-date-display">Wednesday, September 16, 2026</span>
+                        </div>
+
+                        <p id="user-bio" class="user-bio" contenteditable="true" spellcheck="false"
+                            title="Click to edit bio">
+                            Full-Stack Engineer & Tech Enthusiast. Building aesthetic web experiences.
+                        </p>
+
+                        <div class="status-indicator-container">
+                            <span class="status-dot pulsing"></span>
+                            <span id="status-text" contenteditable="true" title="Click to edit status">Online &
+                                Creating</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Clock & Timezone Center Stage -->
+            <section class="clock-stage glass-panel">
+                <div class="clock-stage-header">
+                    <div class="timezone-picker-wrapper">
+                        <i class="fa-solid fa-earth-americas tz-icon"></i>
+                        <select id="timezone-select" class="tz-select">
+                            <option value="local">Local Time Zone</option>
+                            <option value="UTC">UTC (Coordinated Universal Time)</option>
+                            <option value="America/New_York">New York (EDT/EST)</option>
+                            <option value="Europe/London">London (BST/GMT)</option>
+                            <option value="Asia/Tokyo">Tokyo (JST)</option>
+                            <option value="Asia/Shanghai">Beijing / Shanghai (CST)</option>
+                            <option value="Australia/Sydney">Sydney (AEST)</option>
+                        </select>
+                    </div>
+                    <div id="tz-offset-badge" class="tz-offset-badge">UTC+8</div>
+                </div>
+
+                <div class="clock-display-container">
+                    <!-- Main Digital Clock -->
+                    <div class="digital-clock-wrapper">
+                        <div class="digital-time">
+                            <span id="clock-hours">08</span>
+                            <span class="clock-divider">:</span>
+                            <span id="clock-minutes">05</span>
+                            <span class="clock-divider">:</span>
+                            <span id="clock-seconds" class="clock-seconds">17</span>
+                            <span id="clock-ampm" class="clock-ampm">PM</span>
+                        </div>
+                        <div class="digital-date-row">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span id="clock-full-date">Wednesday, September 16, 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Sleek Analog Clock SVG Widget -->
+                    <div class="analog-clock-wrapper">
+                        <div class="analog-clock">
+                            <div class="clock-face">
+                                <!-- Dial Numbers -->
+                                <span class="num num-12">12</span>
+                                <span class="num num-3">3</span>
+                                <span class="num num-6">6</span>
+                                <span class="num num-9">9</span>
+
+                                <!-- Clock Hands -->
+                                <div id="hour-hand" class="hand hour-hand"></div>
+                                <div id="minute-hand" class="hand minute-hand"></div>
+                                <div id="second-hand" class="hand second-hand"></div>
+                                <div class="center-cap"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daylight & Solar Progress Bar -->
+                <div class="solar-tracker">
+                    <div class="solar-info">
+                        <span class="solar-label"><i class="fa-solid fa-sun-plant-wilt"></i> Day Cycle Progress</span>
+                        <span id="solar-percent">83.6%</span>
+                    </div>
+                    <div class="solar-bar-bg">
+                        <div id="solar-bar-fill" class="solar-bar-fill" style="width: 83.6%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Grid Widgets -->
+            <div class="widgets-grid">
+                <!-- Focus Goal Card -->
+                <div class="widget-card glass-panel">
+                    <div class="widget-title">
+                        <i class="fa-solid fa-bullseye title-icon"></i>
+                        <span>Today's Main Focus</span>
+                    </div>
+                    <div class="focus-content">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="focus-checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <input type="text" id="focus-input" class="focus-input"
+                            placeholder="What is your main goal today?"
+                            value="Design & deploy awesome personal clock app">
+                    </div>
+                </div>
+
+                <!-- Quick Scratchpad Note Card -->
+                <div class="widget-card glass-panel">
+                    <div class="widget-title">
+                        <i class="fa-solid fa-note-sticky title-icon"></i>
+                        <span>Quick Notepad</span>
+                        <span class="auto-save-tag"><i class="fa-solid fa-floppy-disk"></i> Auto-saved</span>
+                    </div>
+                    <textarea id="quick-note" class="quick-note"
+                        placeholder="Write thoughts, ideas or code snippets here..."></textarea>
+                </div>
+
+                <!-- Links & Socials Widget -->
+                <div class="widget-card glass-panel">
+                    <div class="widget-title">
+                        <i class="fa-solid fa-link title-icon"></i>
+                        <span>Quick Connect</span>
+                    </div>
+                    <div class="social-links-grid">
+                        <a href="https://github.com" target="_blank" class="social-btn github">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:alex@example.com" class="social-btn email">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-btn twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>© <span id="footer-year">2026</span> <span id="footer-name">Alex Developer</span>. Built with Precision &
+                Style.</p>
+        </footer>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
