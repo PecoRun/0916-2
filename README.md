@@ -6,8 +6,9 @@ A modern, responsive, and customizable personal web dashboard featuring a live r
 
 ## 🌐 Live Demo
 
-- **Local Live Demo URL**: [http://localhost:8080](http://localhost:8080)
-- **Direct Access**: Open [`index.html`](./index.html) directly in any modern browser.
+- **🚀 GitHub Pages Live Demo**: [https://pecorun.github.io/0916-2/](https://pecorun.github.io/0916-2/)
+- **📦 GitHub Repository**: [https://github.com/PecoRun/0916-2](https://github.com/PecoRun/0916-2)
+- **💻 Local Dev Server**: `http://localhost:8080` or open [`index.html`](./index.html) directly.
 
 ---
 
